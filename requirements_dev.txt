@@ -10,3 +10,5 @@ twine
 
 pytest==3.4.2
 pytest-runner==2.11.1
+
+pycryptodome==3.4.11
