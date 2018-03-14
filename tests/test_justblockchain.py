@@ -3,23 +3,19 @@
 
 """Tests for `justblockchain` package."""
 
+import json
 import pytest
 
-
+from Crypto.Hash import SHA256
 from justblockchain import justblockchain
 
 
-@pytest.fixture
-def response():
-    """Sample pytest fixture.
-
-    See more at: http://doc.pytest.org/en/latest/fixture.html
-    """
-    # import requests
-    # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
-
-
-def test_content(response):
+def test_genesis_block():
     """Sample pytest test function with the pytest fixture as an argument."""
-    # from bs4 import BeautifulSoup
-    # assert 'GitHub' in BeautifulSoup(response.content).title.string
+    blockchain = justblockchain.Blockchain()
+    genesis_block = blockchain.get_genesis_block()
+    hash_object = SHA256.new(data=(str(genesis_block.index) +
+                                   genesis_block.previous_hash +
+                                   str(genesis_block.timestamp) +
+                                   genesis_block.data).encode())
+    assert hash_object.hexdigest() == genesis_block.hash
