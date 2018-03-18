@@ -22,7 +22,7 @@ deploy:
   distributions: sdist bdist_wheel
   user: koshikraj
   password:
-    secure: PLEASE_REPLACE_ME
+    secure: Mypy1234#
   on:
     tags: true
     repo: koshikraj/justblockchain

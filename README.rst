@@ -30,7 +30,14 @@ A blockchain linker to help understand hash functions in blockchain
 Quick start
 -----------
 
+Installation
+~~~~~~~~~~~~
+
 - pip install justblockchain
+
+
+Creating simple blockchain
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block::
 
@@ -47,6 +54,20 @@ Quick start
     '816534932c2b7154836da6afc367695e6337db8a921823784c14378abed4f7d7', 'hash':
     'a046e0b31d2374d171a6bf62f15261f8bb1f71e6351aab2ce7ce6d550506d9ee',
     'timestamp': '1521013680', 'index': 1, 'data': 'some block content'}]
+
+Creating a Block using proof-of-work
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block::
+
+    >>> from justblockchain import justblockchain
+    >>> blockchain = justblockchain.Blockchain()
+    >>> blockchain.difficulty_bits = 20
+    >>> blockchain.add_block("some block content")
+    Computing nonce for the block...
+    Success with nonce 2991544
+    Hash is 00000fc3d1420243cca17693bcc75334eb9f01b0943772f5d6456e17f3218abc
+
 
 Credits
 -------
