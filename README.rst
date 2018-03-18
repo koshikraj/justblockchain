@@ -72,7 +72,9 @@ Creating a Block using proof-of-work
 Credits
 -------
 
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+- Implementation of Proof of work algorithm in the version 1.0.0 is inspired from `Mastering Bitcoin <https://github.com/bitcoinbook/bitcoinbook>`_ - First Edition by  `Andreas M. Antonopoulos LLC <http://antonopoulos.com/>`_ which is licensed under `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_
+
+- This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
