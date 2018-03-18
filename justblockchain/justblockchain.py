@@ -35,6 +35,11 @@ class Blockchain(object):
 
         return json.loads(json.dumps(chain, default=lambda o: o.__dict__))
 
+    def reset(self):
+        """resets the blockchain blocks except genesis block"""
+
+        self._chain = [self._chain[0]]
+
     def get_genesis_block(self):
         """creates first block of the chain"""
 
